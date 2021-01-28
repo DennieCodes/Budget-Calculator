@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+        <title>Budget Calculator</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Budget Calculator</h1>
+            
+            <table id="itemList" class="itemList invisible">
+                <thead>
+                    <tr>
+                        <th class="itemName">Item Name</th>
+                        <th class="itemPrice">Item Price</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="itemTable-body" class="itemList-body">
+                </tbody>
+                
+                <tfoot>
+                    <tr>
+                        <td class="table-foot-title">Total</td>
+                        <td class="itemPrice" id="itemTally"></td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <h2 id="addFormTitle">Add an item to the list</h2>
+            
+            <form>
+                <label class="newItemName" for="newItemName">Item Name</label>
+                <label class="newItemPrice" for="newItemPrice">Price</label>
+                <input class="newItemName" name="newItemName" id="itemName"></input>    
+                <input class="newItemPrice" name="newItemPrice" id="itemPrice"></input>    
+                
+                <p id="alert-items" class="invisible alert-items">
+                    Please enter a name and value for the new item
+                </p>
+                
+                <button class="button button-add" id="add" >Add Item</button>
+                <button class="button button-reset invisible" id="reset" >Reset List</button>    
+            </form>
+
+            <p id="alert-funds" class="alert-funds invisible">
+                Please enter a correct value for your funds.
+            </p>
+                   
+            <div class="funds">
+                <label for="funds">How much 💸 is in the fund?</label>
+                <input class="fundInput" name="funds" id="funds"></input>
+            </div>
+                       
+            <button class="button" id="submit">Calculate Purchase!</button>
+            <p id="response" class="invisible response"></p>
+        </div>
+        <script src="index.pack.js"></script>
+    </body>
+</html>
